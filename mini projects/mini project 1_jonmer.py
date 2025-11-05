@@ -19,8 +19,9 @@ else:
         VIP = input("\nAre you a VIP customer????? (y/n) ")
         if VIP.lower() == "y":
             VIPcheck = fullprice * 0.05 # check muna if yung ibabawas ng discount is lalagpas ng 5000
-            if VIPcheck >= 5000: # if lagpas 5000:
-                fullprice -= 5000 # subtract fixed discount
+            if VIPcheck >= 5000:
+                VIPcheck = 5000 # if lagpas 5000:
+                fullprice -= VIPcheck # subtract fixed discount
             else:
                 fullprice -= VIPcheck # if di lagpas 5000 ang discount, apply 5% discount
         
@@ -31,9 +32,10 @@ else:
         VIP = input("\nAre you a VIP customer????? (y/n) ")
         if VIP.lower() == "y":
             VIPcheck = fullprice * 0.05 # check muna if yung ibabawas ng discount is lalagpas ng 5000
-            if VIPcheck >= 5000: # if lagpas 5000:
-                fullprice -= 5000 # subtract fixed discount
+            if VIPcheck >= 5000:
+                VIPcheck = 5000# if lagpas 5000:
+                fullprice -= VIPcheck # subtract fixed discount
             else:
                 fullprice -= VIPcheck # if di lagpas 5000 ang discount, apply 5% discount
-                
+    print("VIP Discount:",VIPcheck)            
     print("Final price:",fullprice,"pesos")
